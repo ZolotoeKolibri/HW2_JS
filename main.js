@@ -204,3 +204,37 @@ let name = prompt("Введите имя","");
 let age = +prompt("Введите возраст","");
 let message = ((name==="John" && age===29)||(name==="Kate" && age===15))?("Привет "+name+" "+age):("Пока");
 alert(message);
+
+//Циклы   Задание 1
+let result = ""
+for (i=1;i<=15;i++){
+    if (i % 2===0){
+        result = result + "#"
+    }
+    else {
+        result = result + "."
+    }
+}
+alert(result);
+
+// Задание 2
+let result =""
+for (i=1;i<=7;i++){
+    if (i % 2===0) {
+        result = result + (i*i + " ") ;
+    }
+}
+alert(result);
+
+// Задание 3
+let result =""
+let name= prompt("Введите имя","");
+for (i=1;i<=4;i++){
+    if (i === 3) {
+        result = result + "Happy birthday dear " + name + "\n" ;
+    }
+    else{
+        result = result + "Happy birthday to you \n" ;
+    }
+}
+alert(result);
