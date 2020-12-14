@@ -238,3 +238,109 @@ for (i=1;i<=4;i++){
     }
 }
 alert(result);
+
+// Задание 4
+while (true) {
+    if (confirm("Прекратить цикл")){
+        break;
+    }
+}
+
+// Задание 5
+let result =0
+let limit = +prompt("Введите границу","");
+for (i=1;i<=limit;i++){
+    if (i%2!==0) {
+        result = result + i ;
+    }
+}
+alert(result);
+
+
+// Задание 6
+let counter= 0
+let random_num =0
+while (true) {
+    counter++
+    random_num=Math.random()
+    if (random_num>0.9){
+        break;
+    }
+}
+alert("iter number: "+counter+"\n"+"Цифра которая прервала цикл "+random_num)
+
+// Задание 7
+let result = ""
+for (i = 1;i<=9;i++){
+    for (j = 1;j<=9;j++){
+        result+=i+"х"+j+"="+i*j+"\n";
+    }
+    result+="\n"
+}
+console.log (result)
+
+// Задание 8
+let fibonacci = [0,1]
+for (i = 2;i<=10;i++){
+    fibonacci[i]= fibonacci[i-1]+fibonacci[i-2]
+}
+alert (fibonacci)
+
+// Задание 9
+let counter= 0
+let sum=0
+while (true) {
+    if (confirm("Вы хотите ввести число?")){
+        counter++
+        sum+=+prompt("Введите число","");
+    }
+    else {
+        break;
+    }
+}
+alert("Количество введенных чисел : "+counter+"\n"+"Сумма "+sum+"\n"+"Среднее арифметическое "+ sum/counter)
+
+// Задание 10
+let password = "ilovejs"
+while (true) {
+    if(confirm("Необходимо авторизироваться")){
+        let a= prompt("Введите пароль","")
+        if (a === null||a ==="") {
+            alert("Пароль не может быть пустым!")
+            continue
+        }
+        if (a === password){
+            alert("Вы успешно авторизованы");
+            break;
+        }
+        else {
+            alert("Пароль не верный. Введите еще раз!");
+
+        }
+    }
+    else{
+        if (confirm("Вы уверены что хотите выйти?")){
+            alert("Вы отменили авторизацию");
+            break;
+        }
+
+    }
+}
+
+// Задание 11
+let result =""
+for (i=1;i<=50;i++){
+    if ((i%5===0)&&(i%3===0)) {
+        result = result + "FizzBuzz\n" ;
+    }
+    else if (i%5===0) {
+        result = result + "Buzz\n" ;
+    }
+    else if (i%3===0) {
+        result = result + "Fizz\n" ;
+    }
+    else{
+        result+=i+"\n"
+    }
+}
+console.log(result);
